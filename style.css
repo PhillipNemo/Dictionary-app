@@ -4,7 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body{
+   Background-color:grey;
+}
 
 
 h1{
@@ -27,7 +29,7 @@ input{
   height: 40px;
   outline:none;
   border-radius:10px;
-  border: 2px solid gold; 
+  border: 2px solid black; 
 }
 input::placeholder{
   font-size: 1.2rem;
@@ -47,7 +49,7 @@ button{
   border:none;
   border-radius:10px;
   color: #000; 
-  background-color: gold; 
+  Box-shadow: 2px 2px 18px white; 
 }
 span{
   color:gold;
