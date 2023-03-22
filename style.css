@@ -39,6 +39,7 @@ body::-webkit-scrollbar-thumb{
     width: 50px;
     height: 30px;
     background-color: #161a1f;
+    border:1px solid beige;
     border-radius: 50px;
     transform: translate(30px,30px);
 }
