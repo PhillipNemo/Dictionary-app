@@ -5,54 +5,182 @@
   box-sizing: border-box;
 }
 body{
-   Background-color:grey;
+  background-color: #132b50;
+}
+body.dark{
+ background-color: #161a1f;
+ color: rgba(0, 255, 255, 0.788);
+}
+body.light{
+  background-color: #132b50;
+  color: beige;
+}
+body::-webkit-scrollbar{
+    width:.5rem;
+}
+body::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: dodgerblue;
+    outline: 1px solid slategrey;
+    border-radius: 20px;
+
+}
+/* #mode-icon{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor:pointer;
+} */
+.mode-switch{
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: #161a1f;
+    border-radius: 50px;
+    transform: translate(30px,30px);
+}
+.mode-switch label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.mode-switch input{
+    display: none;
+}
+.mode-switch .slider-thumb{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #f2f4f6;
+    border-radius: 50%;
+    top: 50%;
+    /* top: 2.5px; */
+    left: 1px;
+    transform: translateY(-50%) translateX(0px);
+    transition: 0.4s;
+}
+.mode-switch input:checked + .slider-thumb{
+    transform: translateY(-50%) translateX(22px);
+    /* left:23px ; */
 }
 
 
 h1{
   margin: 20px 0;
+  text-align: center;
+  color: beige;
 }
-p{
-  background-color: #008c8c;
-  padding: 10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-  border-radius: 10px; 
+main{
+     width: 450px;
+     margin: 40px auto;
+}
+.container{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid dodgerblue;
+}
+h2{
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+.word-pronounciation{
+  color: dodgerblue;
+}
+.speech{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 10px;
+}
+.speech p{
+  width: 100px;
+  padding: 5px;
+  border: 2px solid dodgerblue;
+  color: lightgrey;
+}
+p.curr{
+  background-color: dodgerblue;
   color: #fff;
-  margin: 15px; 
-  font-size: 1.2rem;
+  display: inline-block;
+  padding: 5px;
+}
+.icon{
+  cursor: pointer;
+}
+h5{
+  color: dodgerblue;
+  margin: 9px 0;
+}
+.defi{
+  margin: 10px 0;
+}
+.color{
+  color: dodgerblue;
+  
+}
+.syn-ant{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+justify-content: center;
+}
+.syn-ant p{
+  color: lightgrey;
+}
+
+.search-icon{
+  margin-left: 10px;
+  color:lightgrey ;
 }
 input{
-  display: block; 
-  width: 60%;
+  display: block;
+  background-color: transparent; 
+  width: 70%;
   margin: 0 auto; 
-  padding-left: 5px; 
-  height: 40px;
+  height: 25px;
   outline:none;
-  border-radius:10px;
-  border: 2px solid black; 
-  Backgriund-color:transparent;
+  border:none; 
 }
-input::placeholder{
-  font-size: 1.2rem;
-  
+input:focus::placeholder{
+  color: dodgerblue;
 }
 .btn{
   display: flex; 
   justify-content: center; 
+  align-items: center;
 }
 button{
   font-weight: bolder; 
-  margin:10px auto; 
-  width: 60%;
   padding: 10px; 
   outline: none;
   font-size: 1.3rem;
   border:none;
-  border-radius:10px;
   color: #fff; 
-  Background-color: #000; 
+  background-color: dodgerblue; 
+  cursor: pointer;
+  transition: .8s;
 }
-span{
-  color:gold;
+button:hover{
+  transform: scale(.9);
 }
 
+@media screen and (max-width:500px) {
+  main{
+    width: 90%;
+    height: auto;
+  }
+}
+@media screen and (max-width:300px) {
+  h1{
+    font-size: 1.2rem;
+  }
+  button{
+    font-size: .4rem;
+  }
+}
+        
