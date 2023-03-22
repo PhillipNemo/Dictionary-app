@@ -4,28 +4,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Dictionary App</title>
-  
-  <!-- HTML -->
-  
-
-  <!-- Custom Styles -->
+<link rel="stylesheet" href="./assert/iconfont/icofont/icofont/icofont.min.css">
+  <title>Dictionary app</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
+    <!-- <div id="mode-icon">
+        <i class="icofont-moon" id="mode"> </i>
+    </div> -->
 
 
-<h1 align="center">A Mini Dictionary</h1>
-<input type="text" name="" id="input" placeholder="Input word " />
+     <div class="mode-switch">
+          <input type="checkbox" id="mode" name="mode">
+          <div class="slider-thumb"></div>
+          <label for="mode"></label>
+    </div>
+   <main>
+     <h1>A Mini Dictionary</h1>
+      <div class="container">
+          <div class="search-icon">
+              <i class="icofont-search"> </i>
+          </div>
 
-<div class="btn">
-<button id="btn"> Select</button>
-</div>
+          <input type="text" name="" id="input" placeholder="Search... " />
+          
+          <div class="btn">
+            <button id="btn"> Search</button>
+            </div>
+        </div>
 
-<div id="div"></div>
-  <!-- Project -->
+      <div id="content">
+
+      </div>
+           
+
+
+    </main>
   <script src="main.js"></script>
 </body>
 </html>
